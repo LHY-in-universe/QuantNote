@@ -10,4 +10,6 @@
 \contentsline {subsection}{\numberline {2.3.1}Box packing 盒子包装}{5}{subsection.2.3.1}%
 \contentsline {subsection}{\numberline {2.3.2}Calendar cubes 日历方块}{5}{subsection.2.3.2}%
 \contentsline {subsection}{\numberline {2.3.3}Door to offer 幸运门}{5}{subsection.2.3.3}%
-\contentsline {subsection}{\numberline {2.3.4}Message delivery 信息传输}{5}{subsection.2.3.4}%
+\contentsline {subsection}{\numberline {2.3.4}Message delivery 信件传输}{5}{subsection.2.3.4}%
+\contentsline {subsection}{\numberline {2.3.5}Last ball 最后的球}{6}{subsection.2.3.5}%
+\contentsline {subsection}{\numberline {2.3.6}Light switches 灯的开关}{6}{subsection.2.3.6}%
