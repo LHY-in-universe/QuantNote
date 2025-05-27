@@ -12,4 +12,10 @@
 \contentsline {subsection}{\numberline {2.3.3}Door to offer 幸运门}{5}{subsection.2.3.3}%
 \contentsline {subsection}{\numberline {2.3.4}Message delivery 信件传输}{5}{subsection.2.3.4}%
 \contentsline {subsection}{\numberline {2.3.5}Last ball 最后的球}{6}{subsection.2.3.5}%
-\contentsline {subsection}{\numberline {2.3.6}Light switches 灯的开关}{6}{subsection.2.3.6}%
+\contentsline {subsection}{\numberline {2.3.6}Quant salary 薪水问题}{6}{subsection.2.3.6}%
+\contentsline {section}{\numberline {2.4}Application of Symmetry 对称性的使用}{6}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Coin piles 硬币堆}{6}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Mislabeled bags 错误标签的书包}{7}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Wise men 智者}{7}{subsection.2.4.3}%
+\contentsline {section}{\numberline {2.5}Series Summation 级数相加}{7}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Clock pieces 钟表零件}{7}{subsection.2.5.1}%
