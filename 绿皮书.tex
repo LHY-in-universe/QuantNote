@@ -1,6 +1,132 @@
-% !TEX program = xelatex
-\documentclass{article}
-\usepackage[fontset]{ctex} % 使用 macOS 自带字体
+\documentclass[12pt]{book}
+
+\usepackage[UTF8]{ctex} % 替换 CJKutf8, 更好的中文支持
+\usepackage{geometry}
+\geometry{a4paper,scale=0.7}
+\usepackage{mathrsfs}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{setspace}
+\onehalfspacing
+\setcounter{tocdepth}{2}
+\setcounter{secnumdepth}{2}
+
+\title{绿皮书 \\ A Practical Guide to Quantitative Finance Interviews}
+\author{LHY}
+\date{\today}
+
 \begin{document}
-你好，世界！Hello, XeLaTeX!
+
+\maketitle
+
+\frontmatter % 前言部分（罗马数字页码）
+\tableofcontents
+
+\mainmatter % 正文部分（阿拉伯数字页码）
+
+\chapter{General Principles 一般原则}
+\begin{itemize}
+  \item Build a broad knowledge base
+  \item Practice your interview skills
+  \item Listen carefully
+  \item Speak your mind
+  \item Make reasonable assumptions
+\end{itemize}
+
+\chapter{Brain Teasers 脑筋急转弯}
+\section{Problem Simplification 问题简化}
+\subsection{Screwy pirates 疯狂的海盗}
+\noindent \textit{Question:}
+
+五个海盗有100个金币, 他们采用以下方式分配：
+最年长的海盗提出分配策略, 所有人进行投票, 如果超过50\%的海盗赞同, 通过, 反之最年长的海盗喂鲨鱼. 然后次年长的海盗开始. 假设所有海盗都是完美理性：存活为主, 尽量获得更多金币, 如果两种策略差不多, 船上海盗越少越好. 
+
+\noindent \textit{Solution:} 
+
+考虑两个海盗的简单情况, 海盗代号从1到5, 1大5小. 
+
+对于只有4和5的情况, 无论4提出什么策略都会通过, 所以5会避免出现此种情况. 
+
+对于3、4和5, 3知道如果5在这种策略下一无所获的话, 3就会喂鲨鱼, 所以3给自己99个金币, 给5一个, 这会保障3的策略通过. 在这种情况下, 4一无所获, 所以他要避免这种情况. 
+
+对于2、3、4和5, 2给自己99个, 给4一个, 会保证2的策略通过. 3和5一无所获, 所以会避免这种情况. 
+
+对于1、2、3、4和5, 1给自己98个, 3和5各一个, 1的策略通过. 这也是实际会采取的策略. 
+
+\subsection{Tiger and sheep 老虎和羊}
+\noindent \textit{Question:}
+
+一百只老虎和一只羊被放在一个只有草的神奇小岛上. 老虎可以吃草, 但它们更愿意吃羊. 假设A. 每次只能有一只老虎吃一只羊, 而这只老虎吃完羊后自己也会变成一只羊. B. 所有的老虎都很聪明, 而且非常理性, 它们都想生存下去. 那么羊会被吃掉吗？
+
+\noindent \textit{Solution:} 
+
+两只老虎时不会, 三只老虎时会, 四只老虎时不会. 以此类推.
+
+\section{Logic Reasoning 逻辑推理}
+\subsection{River crossing 过河问题}
+\noindent \textit{Question:}
+
+四个人, A、B、C和D需要过河. 唯一的过河方式是通过一座旧桥, 最多只能容纳两人同时过桥. 由于天黑, 他们不能没有火炬过桥, 而他们只有一个火炬. 所以每对人只能以较慢的人的速度行走. 他们需要尽快地将所有人送到对岸. A是最慢的, 需要10分钟过桥；B需要5分钟；C需要2分钟；D需要1分钟. 那么将所有人送到对岸所需的最短时间是多少？
+
+\noindent \textit{Solution:} 
+
+关键是要认识到, 10 分钟的人应该和 5 分钟的人一起走, 这不应该发生在第一次穿越时, 否则其中一人就必须返回. 因此, C 和 D 应先过河（2 分钟）；然后让 D 返回（分钟）；A 和 B 过河（10 分钟）；让 C 返回（2 分钟）；C 和 D 再次过河（2 分钟）. 
+
+\subsection{Horse race 赛马}
+\noindent \textit{Question:}
+
+这里有25匹马, 每匹马以恒定的速度跑步, 且每匹马的速度都不同于其他马. 由于跑道只有5条道, 每场比赛最多只能有5匹马. 如果你需要找到3匹最快的马, 需要举行的最少比赛次数是多少？
+
+\noindent \textit{Solution:} 
+
+首先举行5场比赛, 得出每场比赛的前三名. 第一比赛, 得出前三名. 第一的第二第三, 第二的第三, 第三进行比赛, 得出前两名.
+
+\section{Thinking Out of the Box 跳出去思考}
+\subsection{Box packing 盒子包装}
+\noindent \textit{Question:}
+
+把53块 $1\times 1\times 4$ 的砖放进 $6\times 6 \times 6$ 的盒子.
+
+\noindent \textit{Solution:} 
+
+思考 $6\times 6 \times 6$ 分成 27个 $2\times 2 \times 2$ 的小盒子, 14个涂成黑色, 13个涂成白色, 交替涂. 一黑一白最多可以放4个砖, 所以最多可以放 $13\times 4 =52$ 个砖.
+
+\subsection{Calendar cubes 日历方块}
+\noindent \textit{Question:}
+
+两个定制骰子, 印上0-9数字, 来显示每个月的日期, 应该怎么安排?
+
+\noindent \textit{Solution:} 
+
+\begin{itemize}
+  \item \textbf{第一个}: 0 1 2 3 4 5
+  \item \textbf{第二个}: 0 1 2 6 7 8
+\end{itemize}
+
+\subsection{Door to offer 幸运门}
+\noindent \textit{Question:}
+
+有两扇门, 一扇幸运一扇不幸. 门前有守卫, 一个讲真话, 一个说假话. 只能问一个守卫一个是或者否的问题, 怎么知道幸运门?
+
+\noindent \textit{Solution:} 
+
+问一个守卫“对面那个守卫会告诉我这个门是幸运门吗”.
+
+\subsection{Message delivery 信息传输}
+\noindent \textit{Question:}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \end{document}
