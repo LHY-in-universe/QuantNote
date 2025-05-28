@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.11.13)  29 MAY 2025 00:15
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.11.13)  29 MAY 2025 01:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -573,17 +573,22 @@ Underfull \vbox (badness 1946) has occurred while \output is active []
 Chapter 3.
 [11
 
-] [12] (/Users/lhy/Desktop/Note/QuantNote/.texpadtmp/绿皮书.aux)
+] [12]
+Overfull \hbox (7.31248pt too wide) in paragraph at lines 360--361
+[]\TU/STSong(0)/m/n/12 可 以 转 换 为 班 里 没 有 同 学 有 相 同 生 日 的 概 率 小 于 \TU/lmr/m/n/12 0.5. \TU/STSong(0)/m/n/12 即 $[] \OML/cmm/m/it/12 <
+ []
+
+[13] (/Users/lhy/Desktop/Note/QuantNote/.texpadtmp/绿皮书.aux)
 Package rerunfilecheck Info: File `绿皮书.out' has not changed.
-(rerunfilecheck)             Checksum: 31A970901FE3DD21322533FC842F404D;7240.
+(rerunfilecheck)             Checksum: BE89241865F753C31ED7CDF51B65AD21;8172.
  ) 
 Here is how much of TeX's memory you used:
- 14799 strings out of 476179
- 319086 string characters out of 5809543
- 660701 words of memory out of 5000000
- 35320 multiletter control sequences out of 15000+600000
+ 14800 strings out of 476179
+ 319099 string characters out of 5809543
+ 661683 words of memory out of 5000000
+ 35321 multiletter control sequences out of 15000+600000
  479751 words of font info for 98 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 89i,6n,97p,388b,364s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 89i,8n,97p,388b,364s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on /Users/lhy/Desktop/Note/QuantNote/.texpadtmp/绿皮书.pdf (16 pages).
+Output written on /Users/lhy/Desktop/Note/QuantNote/.texpadtmp/绿皮书.pdf (17 pages).
