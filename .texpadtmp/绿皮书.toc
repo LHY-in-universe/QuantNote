@@ -18,4 +18,22 @@
 \contentsline {subsection}{\numberline {2.4.2}Mislabeled bags 错误标签的书包}{7}{subsection.2.4.2}%
 \contentsline {subsection}{\numberline {2.4.3}Wise men 智者}{7}{subsection.2.4.3}%
 \contentsline {section}{\numberline {2.5}Series Summation 级数相加}{7}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}Clock pieces 钟表零件}{7}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.1}Missing integers 丢失的整数}{7}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Counterfeit coins 找出假币}{8}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}Glass balls 玻璃球}{8}{subsection.2.5.3}%
+\contentsline {section}{\numberline {2.6}The Pigeon Hole Principle 鸽巢原理}{8}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Matching socks 分袜子}{8}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.2}Have we met before 拉姆齐理论}{9}{subsection.2.6.2}%
+\contentsline {subsection}{\numberline {2.6.3}Ants on a square}{9}{subsection.2.6.3}%
+\contentsline {section}{\numberline {2.7}Modular Arithmetic 模运算}{9}{section.2.7}%
+\contentsline {subsection}{\numberline {2.7.1}Prisoner problem 囚犯问题}{9}{subsection.2.7.1}%
+\contentsline {subsection}{\numberline {2.7.2}Division by 9 9的倍数}{10}{subsection.2.7.2}%
+\contentsline {section}{\numberline {2.8}Math Induction 数学归纳法}{10}{section.2.8}%
+\contentsline {subsection}{\numberline {2.8.1}Chocolate bar problem 巧克力棒问题 }{10}{subsection.2.8.1}%
+\contentsline {section}{\numberline {2.9}Proof by Contradiction 反证法}{10}{section.2.9}%
+\contentsline {subsection}{\numberline {2.9.1}Irrational number 无理数}{10}{subsection.2.9.1}%
+\contentsline {chapter}{\numberline {3}Probability Theory 概率论}{11}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Basic Probability Definitions and Set Operations 基本概念}{11}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Coin toss game 抛硬币游戏}{11}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Drunk passenger 喝醉的乘客}{11}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}N points on a circle 圆上的点}{12}{subsection.3.1.3}%

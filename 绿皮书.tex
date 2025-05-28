@@ -176,8 +176,150 @@
 选出一个传话者, 他每次见到正的杯子会倒过来, 剩下的人第一次看见倒着的杯子要正过来. 传话者进行计数, 49次时即可.
 
 \section{Series Summation 级数相加}
-\subsection{Clock pieces 钟表零件}
+$$\sum_{n=1}^N n =\frac{N(N+1)}{2} $$
+$$\sum_{n=1}^N n^2=\frac{N(N+1)(2N+1)}{6}=\frac{N^3}{3}+\frac{N^2}{2}+\frac{N}{6}$$
+
+\subsection{Missing integers 丢失的整数}
 \noindent \textit{Question:}
+
+在1-100的范围里面, 有98个不一样的数字, 怎么找到两个失去的数字?
+
+\noindent \textit{Solution:} 
+
+计算98个数字的和和平方和, 与1-100的结果做差, 解方程组可得.
+
+\subsection{Counterfeit coins 找出假币}
+\noindent \textit{Question:}
+
+10个袋子, 每个袋子有100个硬币, 所有硬币重10克, 只有一个袋子有假币, 假币重9或者11克. 怎么使用一个显示精确重量的电子秤一次称出那个袋子有假币?
+
+\noindent \textit{Solution:} 
+
+每一个袋子各自取不同数量的硬币, 一起称量. 看理论值与实际值的差, 即可猜出哪个袋子有假币.
+
+\subsection{Glass balls 玻璃球}
+\noindent \textit{Question:}
+
+你在100层楼上, 有两个玻璃球. 你可以往下扔球, 超过X层时, 球会破. 考虑最坏的情况, 为了得到X, 最少要扔多少次球?
+
+\noindent \textit{Solution:} 
+
+假设在N层扔球, 球破了, 最坏要N次才可以得出. 球没有破, 尝试在N+N-1层扔球, 球破, 最坏要N次确定. 球没有破, 尝试N+N-1+N-2层, 以此类推最多层数为N(N+1)/2, 对于100, N=14.
+
+\section{The Pigeon Hole Principle 鸽巢原理}
+如果鸽巢数量比鸽子少, 那么在将所有鸽子放到鸽巢后, 一定有至少一个鸽巢容纳多只鸽子.
+
+\subsection{Matching socks 分袜子}
+\noindent \textit{Question:}
+
+你抽屉里面有2只红外子, 20只黄袜子, 31只蓝袜子. 你要随机在抽屉拿多少只袜子, 才可以保证有成对的袜子?
+
+\noindent \textit{Solution:} 
+
+一共3个颜色, 4只就可以.
+
+\subsection{Have we met before 拉姆齐理论}
+\noindent \textit{Question:}
+
+6个人的聚会中, 一定有三个人互相不认识或者互相认识.
+
+\noindent \textit{Solution:} 
+
+对A来说, 至少3人认识或者不认识A. 这三个人中或者最少两个人认识, 或者都不认识.
+
+\subsection{Ants on a square}
+\noindent \textit{Question:}
+
+有51个蚂蚁在长度为1的广场上, 是否可以拿一个直径1/7的圆盘盖住至少三个蚂蚁?
+
+\noindent \textit{Solution:} 
+
+将广场分成25部分, 其中至少有一个区域最少有三只蚂蚁.
+
+\section{Modular Arithmetic 模运算}
+\subsection{Prisoner problem 囚犯问题}
+\noindent \textit{Question:}
+
+明天, 一百名囚犯将获得自由的机会. 他们都被告知, 每人将被分配戴红色或蓝色的帽子. 每名囚犯都能看到其他人的帽子, 但看不到自己的帽子. 帽子的颜色是随机分配的, 一旦帽子被戴到头上, 他们就不能以任何形式与他人交流, 否则他们将被立即处决. 囚犯将被随机叫出, 叫出的囚犯将猜测自己的帽子的颜色. 每名囚犯都会公开宣布自己的帽子的颜色, 以便其他人都能听到. 如果囚犯正确猜测了自己的帽子的颜色, 他将被立即释放；否则他将被处决. 他们被给予一夜来制定策略, 以拯救尽可能多的囚犯. 他们可以采取什么样的策略, 并且可以保证拯救多少囚犯？
+
+\noindent \textit{Solution:} 
+
+最少99个. 第一个犯人看红色帽子个数, 奇数就是红色, 反之蓝色. 其他人根据他的回答判断自己的颜色.
+
+
+\subsection{Division by 9 9的倍数}
+\noindent \textit{Question:}
+
+证明任意一个数, 若所有整数位相加是9的倍数, 则该数是9的倍数.
+
+\noindent \textit{Solution:} 
+
+$a=a_n 10^n+a_{n-1} 10^{n-1}+...+a_1 10 +a_0 $, 若 $a_n+...+a_1+a_0=9x$, 则 $a-9x=a_n(10^n-1)+a_{n-1}(10^{n-1}-1)+...+a_1(10-1) \% 9 =0$
+
+
+\section{Math Induction 数学归纳法}
+\subsection{Chocolate bar problem 巧克力棒问题 }
+\noindent \textit{Question:}
+
+一个巧克力有 $6\times 8$ 样子, 可以把巧克力分成两份 $6\times 3, 6\times 5$. 多少次可以把巧克力分成48份?
+
+\noindent \textit{Solution:} 
+
+每次断裂都可以使巧克力数量+1, 所以有48-1=47次.
+
+\section{Proof by Contradiction 反证法}
+\subsection{Irrational number 无理数}
+\noindent \textit{Question:}
+
+有理数可以使用分数表示, 证明$\sqrt{2}$是无理数.
+
+ \noindent \textit{Solution:} 
+ 
+ 假设 $\sqrt{2}=\frac{m}{n}$, 其中 $mn $不可约分. 可得$2n^2=m^2$, m是偶数, $m=2x, m^2=4x^2, n^2=2x^2$, 得出n是偶数, mn可以约分.
+ 
+  
+\chapter{Probability Theory 概率论}
+\section{Basic Probability Definitions and Set Operations 基本概念}
+
+\textbf{Outcome} $(\omega)$: The outcome of an experiment or trial
+
+\textbf{Sample space OR Probability space} $\Omega$: The set of all possible outcomes of an experiment.
+
+\subsection{Coin toss game 抛硬币游戏}
+\noindent \textit{Question:}
+
+A有n+1个硬币, B有n个硬币. 抛完所有硬币后, A朝上的数量比B多的概率是?
+
+ \noindent \textit{Solution:} 
+ 
+ 考虑A有n个硬币, 这时候有对称性. 一共三种可能, 一方多或者一样多. 可得式子 $2x+y=1$. 考虑A多出的一个硬币, A比B多的概率变成 $x+0.5y=x+0.5(1-2x)=0.5$
+
+\subsection{Drunk passenger 喝醉的乘客}
+\noindent \textit{Question:}
+
+有100个人坐飞机, 每个人都有自己的座位. 第一个乘客喝醉了, 随机坐了一个座位. 如果其他乘客发现自己的座位被占, 会随机挑选一个座位. 第一百个乘客正确做到自己座位的概率?
+
+ \noindent \textit{Solution:} 
+ 
+ 只考虑第一个座位和第一百个座位, 只有两种可能. 第一个座位在第一百个之前坐, 或在之后坐. 两个事件概率相同. 对于第一种情况, 会成功做到自己座位上面, 概率是0.5.
+ 
+ \subsection{N points on a circle 圆上的点}
+\noindent \textit{Question:}
+
+
+N个点随机分布在圆上, 它们都在一个半圆的概率是多少?
+
+ \noindent \textit{Solution:} 
+ 
+ 
+
+
+
+
+
+
+
+
 
 
 

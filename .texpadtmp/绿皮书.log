@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.11.13)  27 MAY 2025 21:12
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.11.13)  29 MAY 2025 00:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -549,20 +549,18 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 ] [2
 
-] (/Users/lhy/Desktop/Note/QuantNote/.texpadtmp/绿皮书.toc)
+] (/Users/lhy/Desktop/Note/QuantNote/.texpadtmp/绿皮书.toc [1
+
+])
 \tf@toc=\write4
 \openout4 = `绿皮书.toc'.
 
- [1
-
-]
 LaTeX Font Info:    Font shape `TU/STSong(0)/m/sl' in size <12> not available
 (Font)              Font shape `TU/STSong(0)/m/it' tried instead on input line 26.
- [2
-
-]
+ [2]
 Chapter 1.
 [1
+
 
 ] [2
 
@@ -571,17 +569,21 @@ Chapter 2.
 
 Underfull \vbox (badness 1946) has occurred while \output is active []
 
- [3] [4] [5] [6] [7] (/Users/lhy/Desktop/Note/QuantNote/.texpadtmp/绿皮书.aux)
+ [3] [4] [5] [6] [7] [8] [9] [10]
+Chapter 3.
+[11
+
+] [12] (/Users/lhy/Desktop/Note/QuantNote/.texpadtmp/绿皮书.aux)
 Package rerunfilecheck Info: File `绿皮书.out' has not changed.
-(rerunfilecheck)             Checksum: 98FC008B19D8E0A551F486E6D4BBB2FE;3674.
+(rerunfilecheck)             Checksum: 31A970901FE3DD21322533FC842F404D;7240.
  ) 
 Here is how much of TeX's memory you used:
- 14793 strings out of 476179
- 319010 string characters out of 5809543
- 656934 words of memory out of 5000000
- 35314 multiletter control sequences out of 15000+600000
+ 14799 strings out of 476179
+ 319086 string characters out of 5809543
+ 660701 words of memory out of 5000000
+ 35320 multiletter control sequences out of 15000+600000
  479751 words of font info for 98 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 89i,6n,97p,363b,354s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 89i,6n,97p,388b,364s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on /Users/lhy/Desktop/Note/QuantNote/.texpadtmp/绿皮书.pdf (11 pages).
+Output written on /Users/lhy/Desktop/Note/QuantNote/.texpadtmp/绿皮书.pdf (16 pages).
