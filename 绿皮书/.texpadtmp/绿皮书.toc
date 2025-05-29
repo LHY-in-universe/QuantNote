@@ -57,3 +57,5 @@
 \contentsline {subsection}{\numberline {3.3.11}Polya urn model 波利亚罐子模型}{17}{subsection.3.3.11}%
 \contentsline {subsection}{\numberline {3.3.12}Cars on road 路上的车}{18}{subsection.3.3.12}%
 \contentsline {section}{\numberline {3.4}Discrete and Continuous Distributions 离散与连续分布}{18}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Expected Value, Variance \& Covariance 期望, 方差和协方差}{19}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Connecting noodles 连接面条}{19}{subsection.3.5.1}%

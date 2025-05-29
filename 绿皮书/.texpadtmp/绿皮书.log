@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.11.13)  29 MAY 2025 18:01
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.11.13)  29 MAY 2025 21:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -661,13 +661,13 @@ Underfull \hbox (badness 1983) in paragraph at lines 582--582
 
 [18] [19] (/Users/lhy/Desktop/Note/QuantNote/绿皮书/.texpadtmp/绿皮书.aux)
 Package rerunfilecheck Info: File `绿皮书.out' has not changed.
-(rerunfilecheck)             Checksum: F86B0C423FA8D0CC18EBD0E2089D6ECC;11435.
+(rerunfilecheck)             Checksum: C7B5A74825938EB07F455CE575406CF0;11970.
  ) 
 Here is how much of TeX's memory you used:
- 15267 strings out of 476179
- 328636 string characters out of 5809543
- 675157 words of memory out of 5000000
- 35765 multiletter control sequences out of 15000+600000
+ 15268 strings out of 476179
+ 328649 string characters out of 5809543
+ 675720 words of memory out of 5000000
+ 35766 multiletter control sequences out of 15000+600000
  479775 words of font info for 101 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  89i,18n,97p,551b,365s stack positions out of 10000i,1000n,20000p,200000b,200000s
