@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.11.13)  29 MAY 2025 10:29
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.11.13)  29 MAY 2025 10:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -402,7 +402,7 @@ LaTeX Info: Redefining \[ on input line 2938.
 LaTeX Info: Redefining \] on input line 2939.
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
-) (/Users/lhy/Desktop/Note/QuantNote/.texpadtmp/绿皮书.aux)
+) (/Users/lhy/Desktop/Note/QuantNote/绿皮书/.texpadtmp/绿皮书.aux)
 \openout1 = `绿皮书.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
@@ -529,7 +529,7 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 19.
 LaTeX Info: Redefining \pageref on input line 19.
 LaTeX Info: Redefining \nameref on input line 19.
- (/Users/lhy/Desktop/Note/QuantNote/.texpadtmp/绿皮书.out) (/Users/lhy/Desktop/Note/QuantNote/.texpadtmp/绿皮书.out)
+ (/Users/lhy/Desktop/Note/QuantNote/绿皮书/.texpadtmp/绿皮书.out) (/Users/lhy/Desktop/Note/QuantNote/绿皮书/.texpadtmp/绿皮书.out)
 \@outlinefile=\write3
 \openout3 = `绿皮书.out'.
 
@@ -549,7 +549,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 ] [2
 
-] (/Users/lhy/Desktop/Note/QuantNote/.texpadtmp/绿皮书.toc [1
+] (/Users/lhy/Desktop/Note/QuantNote/绿皮书/.texpadtmp/绿皮书.toc [1
 
 ])
 \tf@toc=\write4
@@ -588,17 +588,17 @@ Overfull \hbox (59.41718pt too wide) has occurred while \output is active
 \TU/lmr/m/sl/12 3.3.  CONDITIONAL PROBABILITY AND BAYES’S FORMULA \TU/STSong(0)/m/it/12 条 件 概 率 和 贝 叶 斯 公 式 \TU/lmr/m/n/12 15
  []
 
-[15] [16] (/Users/lhy/Desktop/Note/QuantNote/.texpadtmp/绿皮书.aux)
+[15] [16] (/Users/lhy/Desktop/Note/QuantNote/绿皮书/.texpadtmp/绿皮书.aux)
 Package rerunfilecheck Info: File `绿皮书.out' has not changed.
 (rerunfilecheck)             Checksum: 3ED5A1ACA2192BEA1F3AF9A91EE3D8AE;10093.
  ) 
 Here is how much of TeX's memory you used:
  14845 strings out of 476179
- 321854 string characters out of 5809543
+ 321906 string characters out of 5809543
  665691 words of memory out of 5000000
  35366 multiletter control sequences out of 15000+600000
  479751 words of font info for 98 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  89i,9n,97p,408b,364s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on /Users/lhy/Desktop/Note/QuantNote/.texpadtmp/绿皮书.pdf (20 pages).
+Output written on /Users/lhy/Desktop/Note/QuantNote/绿皮书/.texpadtmp/绿皮书.pdf (20 pages).

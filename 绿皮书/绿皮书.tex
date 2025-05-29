@@ -359,30 +359,264 @@ $$\binom{n}{r}=\frac{n!}{(n-r)!r!}$$
  
  可以转换为班里没有同学有相同生日的概率小于0.5. 即 $\frac{365\times364\times\cdots\times(365-n+1)}{365^n}<1/2$. n=23.
  
+   \subsection{Cubic of integer 整数立方}
+\noindent \textit{Question:}
+
+x是 $1-10^{12}$ 的一个整数, x的立方的最后两个数字是11的概率是多少?
+
+ \noindent \textit{Solution:} 
+ 
+ x总可以写为 a+10b, a是x的最后一位. 这样 $x^3=(a+10b)^3=a^3+30a^2b+300ab^2+1000b^3$, 最后一位数字只和a有关, 得出a=1. 进而推出b的最后一位是7, x的最后两位是71. 
+ 
+ \section{Conditional Probability and Bayes's formula 条件概率和贝叶斯公式}
+
+\textbf{Conditional probability P(A|B)}: If P(B) > 0, then $P(A|B) = \frac{P(AB)}{P(B)}$
+is the fraction
+of B outcomes that are also A outcomes.
+
+\textbf{Multiplication Rule}: $$P(E_1E_2\cdots E_n)=P(E_1)P(E_2\mid E_1)P(E_3\mid E_1E_2)\cdots P(E_n\mid E_1\cdots E_{n-1})$$
+
+\textbf{Bayes' Formula}: $$P(F_j\mid E)=\frac{P(E\mid F_j)P(F_j)}{\sum_{i=1}^nP(E\mid F_i)P(F_i)}$$ 
+
+   \subsection{Boys and girls 男孩女孩}
+\noindent \textit{Question:}
+
+公司为至少有一个男孩的母亲举行宴会, Jackson有两个孩子, 被邀请了, 那么两个孩子都是男生的概率是?
+
+ \noindent \textit{Solution:} 
+ 
+B代表最少有一个男孩的事件, A代表都是男孩的事件. $P(A\mid B)=\frac{P(A\cap B)}{P(B)}=\frac{P\left(\{(b,b)\}\right)}{P\left(\{(b,b),(b,g),(g,b)\}\right)}=\frac{1/4}{3/4}=\frac{1}{3}$ 
+
+   \subsection{Unfair coin 不公平的硬币}
+\noindent \textit{Question:}
+
+你有1000枚硬币, 999正常, 一个不正常有两个正面. 你随机选择一个硬币, 扔了10次都朝上. 那么选出的是不正常的硬币的概率是?
+
+ \noindent \textit{Solution:} 
+ 
+ 应用贝叶斯公式, $P(A\mid B)=\frac{P(B\mid A)P(A)}{P(B)}=\frac{P(B\mid A)P(A)}{P(B\mid A)P(A)+P(B\mid A^c)P(A^c)}$. $A$ 是选出错误硬币事件, $A^c$ 是选出正确硬币事件, B是全部朝上事件. 带入可得结果, $P(A\mid B)=\frac{P(B\mid A)P(A)}{P(B\mid A)P(A)+P(B\mid A^c)P(A^c)}=\frac{1/1000\times1}{1/1000\times1+999/1000\times1/1024}\approx0.5.$
+ 
+    \subsection{Von Neumann’s Method 冯·诺伊曼方法}
+\noindent \textit{Question:}
+ 
+ 对于一个坏硬币, 正反面概率不相等. 有什么办法可以使用这个硬币测0.5概率事件?
+ 
+  \noindent \textit{Solution:} 
+  
+  连续扔两次, 正反和反正的概率一样, 舍弃正正和反反情况.
+ 
+     \subsection{Dice order 骰子的顺序}
+\noindent \textit{Question:}
+ 
+ 连着扔三个骰子, 结果严格递增的概率?
+ 
+   \noindent \textit{Solution:} 
+   
+   概率是三次结果不一样且只按一种顺序. $$\begin{aligned}\mathrm{P}&=P(\text{different numbers in all three throws})\times P(\text{increasing order|3 different numbers})\\&=(1\times\frac{5}{6}\times\frac{4}{6})\times\frac{1}{6}=5/54\end{aligned}$$
+ 
+ \subsection{Monty Hall problem 蒙提霍尔问题}
+\noindent \textit{Question:} 
+ 
+ 你面前有三扇门, 一扇后面是汽车, 其余是山羊. 你随机选择一扇, 这时主人打开一扇有山羊并且没有被选择的门. 那么你是否应该换门?
+ 
+\noindent \textit{Solution:} 
+    
+如果最开始选择山羊(2/3), 换门会得到车. 最开始车(1/3), 换门会得到山羊, 不换门是车. 所以应该换门.    
+ 
+ \subsection{Branching Process 分支过程}
+\noindent \textit{Question:}  
+ 
+ 一个变形虫有四种状态:死亡, 保持不变, 分裂为两个和三个. 后代完全一样. 则该变形虫种群灭绝的概率?
+  
+\noindent \textit{Solution:} 
+
+假设一只灭绝的概率是 $P(E)$, 那么由$$P(E)=P(E\mid F_1)P(F_1)+P(E\mid F_2)P(F_2)+\cdotp\cdotp\cdotp+P(E\mid F_n)P(F_n)$$ 得到 $$P(E)=1/4\times1+1/4\times P(E)+1/4\times P(E)^2+1/4\times P(E)^3$$ 解得 $P(E)=\sqrt{2}-1\approx0.414$.
+ 
+  \subsection{Candies in a jar 蜜罐中的糖果}
+\noindent \textit{Question:}  
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 
 
 
