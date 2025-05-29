@@ -1,21 +1,33 @@
 \documentclass[12pt]{book}
 
-\usepackage[UTF8]{ctex} % 替换 CJKutf8, 更好的中文支持
-\usepackage{geometry}
-\geometry{a4paper,scale=0.7}
+% 中文支持和基础设置
+\usepackage[UTF8]{ctex}
+\usepackage[a4paper, scale=0.7]{geometry}
 \usepackage{mathrsfs}
 \usepackage{amssymb}
-\usepackage{hyperref}
 \usepackage{amsmath}
+% 超链接设置
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,
+    urlcolor=cyan,
+    pdftitle={绿皮书}
+}
+% 页面布局和格式设置
 \usepackage{setspace}
+\usepackage{tabularx} 
 \onehalfspacing
 \setcounter{tocdepth}{2}
 \setcounter{secnumdepth}{2}
-
+% 表格优化
+\usepackage{booktabs}
+\usepackage{array}
+% 文档信息
 \title{绿皮书 \\ A Practical Guide to Quantitative Finance Interviews}
 \author{LHY}
 \date{\today}
-
 \begin{document}
 
 \maketitle
@@ -435,28 +447,143 @@ B代表最少有一个男孩的事件, A代表都是男孩的事件. $P(A\mid B)
   \subsection{Candies in a jar 蜜罐中的糖果}
 \noindent \textit{Question:}  
 
+在一个罐子中有10个红球, 20个蓝球, 30个绿球. 不放回拿球, 在拿完所有红球后, 至少还有一个蓝球和绿球的概率?
 
+\noindent \textit{Solution:} 
+
+所有球中最后一个球是绿球的概率是 $\frac{30}{60}$, 在所有红球和蓝球中最后一个球是蓝球的概率是 $\frac{20}{30}$. 以此类推, 可得出总概率为 $\frac{30}{60}\times \frac{20}{30}+\frac{20}{60}\times\frac{30}{40}=\frac{7}{12}$.
+
+  \subsection{Coin toss game 扔硬币游戏}
+\noindent \textit{Question:}
+
+ A和B扔硬币, A先开始. 如果最后两次先上后下, 游戏结束, 扔下的人获胜. A获胜的概率?
+ 
+ \noindent \textit{Solution:} 
+ 
+ $P(A)=0.5P(A|H)+0.5P(A|T)$ 是A获胜的概率, $1-P(A)$ 是B获胜的概率. A如果第一次下, 游戏等价B先扔. $P(A|T)=1-P(A)$, A第一次上, B有一半概率赢, 有一半概率上. 这时有 $$P(A|H)=0.5\times 0 +0.5\times (1-P(A|H))\Rightarrow P(A|H)=1/3 $$
+ 带入得 $P(A)=1/2\times 1 /3 +1/2 (1-P(A))\Rightarrow P(A)=4/9 $.
+ 
+   \subsection{Russian roulette series 俄罗斯转轮}
+\noindent \textit{Question:}
+ 
+ 一把左轮手枪有6个子弹孔, 只有一发子弹, 一个人扣动扳机后另一个人继续. 你要当第一个还是第二个? 如果每次扣动扳机后打乱顺序, 你要当第一个还是第二个?
+ 
+ \noindent \textit{Solution:} 
+ 
+  因为子弹位置随机, 所以两个人死亡概率相等.
+
+
+假设第一个人死亡概率是 $p$, 第二个人就是 $1-p$. 因为事件都是相互独立的, 那么在第一个人没死后, 他会变成第二个人. $p=1/6+5/6\times (1-p)\Rightarrow p =6/11$.
  
  
+   \subsection{Gambler's Ruin Problem 赌徒破产问题}
+\noindent \textit{Question:} 
+
+ 一个赌徒有 $p$ 概率赢得一元, $1-p$ 概率输掉一元. 最开始有 $i$元, 那么资产达到 $N$ 元的概率?
+ 
+ \noindent \textit{Solution:} 
+ 
+ 假设 $P_i$ 是从i到N的概率. 那么$P_0=0, P_N=1$. 
+ $$ P_i=p P_{i+1}+qP_{i-1} \Rightarrow  P_{i+1}-P_i=\frac{q}{p}(P_i-P_{i-1})=(\frac{q}{p})^2(P_{i-1}-P_{i-2})=...= (\frac{q}{p})^{i}(P_1-P_0) $$
+ 
+ 使用 $P_N$ 取得 $P_1$, 即可得到答案.
+
+   \subsection{Polya urn model 波利亚罐子模型}
+\noindent \textit{Question:} 
+ 
+ 从一个罐子中拿球, 有红黑两种, 第一次红球, 第二次黑球. 第n次拿到红球的概率是前n-1次拿到的红球比n-1. 那么在第一百次拿到50个红球的概率?
+ 
+ \noindent \textit{Solution:} 
+ 
+ 引入记号$(n,k)$, 前n次有k个红球. 可以得到 $P_{3,1}=1/2, P_{3,2}=1/2$. $$\left\{\begin{array}{l}P_{4,1}=P((4,1)\mid(3,1))\times P_{3,1}+P((4,1)\mid(3,2))\times P_{3,2}=\frac{2}{3}\times\frac{1}{2}+0\times\frac{1}{2}=\frac{1}{3}\\P_{4,2}=P((4,2)\mid(3,1))\times P_{3,1}+P((4,2)\mid(3,2))\times P_{3,2}=\frac{1}{3}\times\frac{1}{2}+\frac{1}{3}\times\frac{1}{2}=\frac{1}{3}\\P_{4,3}=P((4,3)\mid(3,1))\times P_{3,1}+P((4,3)\mid(3,2))\times P_{3,2}=0\times\frac{1}{2}+\frac{2}{3}\times\frac{1}{2}=\frac{1}{3}\end{array}\right.$$
+ 
+ 使用数学归纳法猜测 $P_{n,k}=\frac{1}{n-1}$. $$\begin{aligned}&P_{n+1,k}=P\left(miss|(n,k)\right)P_{n,k}+P\left(score|(n,k-1)\right)P_{n,k-1}\\&=\left(1-\frac{k}{n}\right)\frac{1}{n-1}+\frac{k-1}{n}\frac{1}{n-1}=\frac{1}{n}\end{aligned}$$
+ 
+    \subsection{Cars on road 路上的车}
+\noindent \textit{Question:}
+ 
+ 在高速公路上任意20分钟至少看见一辆车的概率是609/625, 那么在任意5分钟看见一辆车的概率是?
+ 
+ \noindent \textit{Solution:} 
+ 
+ 将任意一个时间段分成4份, 假设在一个5分钟内看见车的概率是$p$, 那么在四段时间都看不见车的概率为 $(1-p)^4=1-609/625$, 得出 $p=3/5$.
+ 
+ \section{Discrete and Continuous Distributions 离散与连续分布} 
+ 
+\begin{table}[h]
+\caption{Discrete Probability Distributions}
+\label{tab:distributions}
+\begin{tabularx}{\linewidth}{@{} l X c c @{}}  % @{}消除左右边距
+\toprule
+\textbf{Name} & \textbf{Probability Mass Function (pmf)} & $\mathbf{E[X]}$ & $\mathbf{\text{Var}(X)}$ \\
+\midrule
+Uniform &
+$P(x) = \dfrac{1}{b - a + 1}, \quad x = a, \ldots, b$ &
+$\dfrac{b + a}{2}$ &
+$\dfrac{(b - a + 1)^2 - 1}{12}$ \\
+\addlinespace[2pt]
+Binomial &
+$P(x) = \dbinom{n}{x} p^x (1 - p)^{n - x}, \quad x = 0, \ldots, n$ &
+$n p$ &
+$n p (1 - p)$ \\
+\addlinespace[2pt]
+Poisson &
+$P(x) = \dfrac{e^{-\lambda t} (\lambda t)^x}{x!}, \quad x = 0, 1, \ldots$ &
+$\lambda t$ &
+$\lambda t$ \\
+\addlinespace[2pt]
+Geometric &
+$P(x) = (1 - p)^{x - 1} p, \quad x = 1, 2, \ldots$ &
+$\dfrac{1}{p}$ &
+$\dfrac{1 - p}{p^2}$ \\
+\addlinespace[2pt]
+Negative Binomial &
+$P(x) = \dbinom{x - 1}{r - 1} p^r (1 - p)^{x - r}, x = r, r+1, \ldots$ &
+$\dfrac{r}{p}$ &
+$\dfrac{r (1 - p)}{p^2}$ \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Continuous Probability Distributions}
+\label{tab:continuous_dist}
+\begin{tabularx}{\linewidth}{@{} l X c c @{}}  % @{}消除左右边距
+\toprule
+\textbf{Name} & \textbf{Probability Density Function (pdf)} & $\mathbf{E[X]}$ & $\mathbf{Var(X)}$ \\
+\midrule
+Uniform & 
+$\dfrac{1}{b-a},\quad a \leq x \leq b$ & 
+$\dfrac{a+b}{2}$ & 
+$\dfrac{(b-a)^2}{12}$ \\
+\addlinespace[3pt]
+Normal & 
+$\dfrac{1}{\sqrt{2\pi}\sigma}\exp\left(-\dfrac{(x-\mu)^2}{2\sigma^2}\right),\quad x \in \mathbb{R}$ & 
+$\mu$ & 
+$\sigma^2$ \\
+\addlinespace[3pt]
+Exponential & 
+$\lambda e^{-\lambda x},\quad x \geq 0$ & 
+$\dfrac{1}{\lambda}$ & 
+$\dfrac{1}{\lambda^2}$ \\
+\addlinespace[3pt]
+Gamma & 
+$\dfrac{\lambda^\alpha}{\Gamma(\alpha)}x^{\alpha-1}e^{-\lambda x},\quad x \geq 0$ \newline
+$\Gamma(\alpha) = \displaystyle\int_0^\infty y^{\alpha-1}e^{-y}\,dy$ & 
+$\dfrac{\alpha}{\lambda}$ & 
+$\dfrac{\alpha}{\lambda^2}$ \\
+\addlinespace[3pt]
+Beta & 
+$\dfrac{\Gamma(\alpha+\beta)}{\Gamma(\alpha)\Gamma(\beta)}x^{\alpha-1}(1-x)^{\beta-1},0 < x < 1$ & 
+$\dfrac{\alpha}{\alpha+\beta}$ & 
+$\dfrac{\alpha\beta}{(\alpha+\beta)^2(\alpha+\beta+1)}$ \\
+\bottomrule
+\end{tabularx}
+\end{table}
  
  
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+
  
  
  
